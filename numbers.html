@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width"=device-witdh, initial-scale=1.0>
+    <title?>Numbers and Operators</title>
+
+    <link rel="stylesheet" href="numbers css">
+
+</head>
+<header>
+	<h1>Sales Slip</h1>
+	<h2>James Vang</h2>
+</header>
+<main>
+	<h3>Line Items</h3>
+	<div class="tableform">
+		<span class="heading">Description</span>
+		<span class="heading">Quantity</span>
+		<span class="heading">Price</span>
+		<label><input type="text" id="desc1"></label>
+		<label><input type="text" id="q1" size="3"></label>
+		<label><input type="text" id="p1" size="5"></label>
+		<label><input type="text" id="desc2"></label>
+		<label><input type="text" id="q2" size="3"></label>
+		<label><input type="text" id="p2" size="5"></label>
+		<label><input type="text" id="desc3"></label>
+		<label><input type="text" id="q3" size="3"></label>
+		<label><input type="text" id="p3" size="5"></label>
+	</div>
+	<h3>Discount</h3>
+	<label class="heading">Discount %: <input type="text" id="discount" placeholder=".10"></label>
+	<h3>Tax</h3>
+	<label class="heading">Tax %: <input type="text" id="tax" placeholder=".075"></label>
+
+	<div class="process"><button onclick="getTotal()">Submit Sales Slip</button>
+	</div>
+	<p id="output"></p>
+</main>
+<footer>
+	&copy;<span id="copyright"></span> &bull; Student Name &bull; BYU-Idaho &bull; CIT 160
+</footer>
+
+<script>
+    document.querySelector('#copyright').textContent=
+    new Date().getFullYear();
+
+    function getTotal() {
+        // INPUT
+        let q1 = 0;
+        let p1 = 0;
+        let q2 = 0;
+        let p2 = 0;
+        let q3 = 0;
+        let p3 = 0;
+        
+        q1 = parseInt(document.querySelector)('#q1).value);
+        p1 = parseInt(document.querySelector)('#p1).value);
+        q2 = parseInt(document.querySelector)('#q2).value);
+        p2 = parseInt(document.querySelector)('#p2).value);
+        q3 = parseInt(document.querySelector)('#q3).value);
+        p3 = parseInt(document.querySelector)('#p3).value);
+    }
+</script>
