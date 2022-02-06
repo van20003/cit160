@@ -1,0 +1,18 @@
+<header>
+	<h1>Scripture Story Build</h1>
+	<h2>Student Name</h2>
+</header>
+<main>
+	<h3>Inputs</h3>
+	<label class="heading">Provide a first name: <input type="text" id="firstname" placeholder="Sarah"></label>
+	<label class="heading">Name a fruit: <input type="text" id="fruit" placeholder="apple"></label>
+	<label class="heading">Name an animal: <input type="text" id="animal1" placeholder="horse"></label>
+	<label class="heading">Name another animal: <input type="text" id="animal2" placeholder="lamb"></label>
+
+	<div class="process"><button onclick="___()">Build Story</button>
+	</div>
+	<p id="output"></p>
+</main>
+<footer>
+	&copy;<span id="copyright"></span> &bull; Student Name &bull; BYU-Idaho &bull; CIT 160
+</footer>
