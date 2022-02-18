@@ -1,0 +1,42 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Alarm Clock</title>
+</head>
+
+<body>
+    <header>
+        <h1>Week 7 Alarm Cloc</h1>
+        <h2>James Vang</h2>
+    </header>
+
+<main>
+    <label><button onclick="checkAlarm()">Start Alarm Clock</button></label>
+</hr />
+</main>
+
+<script>
+    function checkAlarm() {
+            // INITIALIZE
+            const now = new Date();
+            let message = "Get Up!";
+
+            // INPUT
+            const theMonth = theDate.getMonth();
+            const theDate = theDate.getDate();
+            const theDay = theDate.getDay();
+            //console.table(theMonth, theDate, theDay);
+
+            // PROCESSING
+            if ( theDay === 5) || theDay === 6 || ( theMonth === 0 && theDate === 1) || ( theMonth === 3 && theDate === 4 ) || ( theMonth === 11 && theDate === 25 ) ) {
+                message = "Sleep in!";
+            }
+
+            // OUTPUT
+            document.querySelector("#messege").textContent = message;
+
+    }
+</script>
+</body>
