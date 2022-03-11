@@ -1,45 +1,18 @@
-<!DOCTYPE html> 
-<html>
-
-<head>
-    <meta charset="utf-8" />
-    <title>Alarm Clock</title>
-</head>
-
-<body>
-    <header>
-        <h1>Week 7 Discount</h1>
-        <h2>James Vang</h2>
-    </header>
-
+<header>
+	<h1>Scripture Story Build</h1>
+	<h2>Student Name</h2>
+</header>
 <main>
-    <label><button onclick="Discount()">Calculate Discount</button></label>
-</hr />
+	<h3>Inputs</h3>
+	<label class="heading">Provide a first name: <input type="text" id="firstname" placeholder="Sarah"></label>
+	<label class="heading">Name a fruit: <input type="text" id="fruit" placeholder="apple"></label>
+	<label class="heading">Name an animal: <input type="text" id="animal1" placeholder="horse"></label>
+	<label class="heading">Name another animal: <input type="text" id="animal2" placeholder="lamb"></label>
+
+	<div class="process"><button onclick="___()">Build Story</button>
+	</div>
+	<p id="output"></p>
 </main>
-
-<script>
-    const UNAME = 'Bob';
-    const UPASS = 'Shazam';
-
-    function checkCredentials() {
-            let message = '';
-        
-           // INPUT
-            let username = document/querySelector('#username').value
-            let username = document/querySelector('#username').value
-            
-            // PROCESSING 
-            if (username === UNAME && password === UPASS) {
-                //valid
-                message = "Welcome!";
-            } else {
-                message = "Access Denied"
-            }
-
-            // OUTPUT
-            document.querySelector("#messege").textContent = message;
-           
-
-    }
-</script>
-</body>
+<footer>
+	&copy;<span id="copyright"></span> &bull; Student Name &bull; BYU-Idaho &bull; CIT 160
+</footer>

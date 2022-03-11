@@ -9,7 +9,7 @@
 	<label class="heading">Name an animal: <input type="text" id="animal1" placeholder="horse"></label>
 	<label class="heading">Name another animal: <input type="text" id="animal2" placeholder="lamb"></label>
 
-	<div class="process"><button onclick="___()">Build Story</button>
+	<div class="process"><button onclick="()">Build Story</button>
 	</div>
 	<p id="output"></p>
 </main>
