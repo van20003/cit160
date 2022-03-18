@@ -20,38 +20,57 @@
         </label><br><br>
 
         <button onclick="processTotal()">Process Total</button>
-
+        
         <div id="total"></div>
 
         <script>
+        function checkInput(){
+        	let statetax2 = document.getElementById("state").value;
+			let subtot2 = document.getElementById("subtotal").value;
+        
+			document.getElementById("total").innerHTML = dayDiscount();
+        }
+        
+        
+        
             function processTotal() {
+            
                 // Declarations
                 let total = 0;
                 // input
-                let subtotal = parseFloat(document.querySelector("#subtotal").value);
-                let statetax = parseFloat(document.querySelector("#state").value);
+                let subtotal = document.getElementById("subtotal").value;
+                let statetax = document.getElementById("state").value;
 
                 // Determine if there is a day discount
                 let discount = dayDiscount();
                 total = subtotal * (1 - discount);
-
+				//document.querySelector("#total").innerHTML = "Total Amount Due: $" + total; -> 850
                 // Determine if there is an amount discount
-                if(subtotal > 100)(
-                    let adiscount = amountDiscount(subtotal);
-                    total = subtotal * (1- discount);
-
+                
+               	let adiscount = amountDiscount(subtotal);
+                total = total * (1- discount);            
+				//document.querySelector("#total").innerHTML = "Total Amount Due: $" + total; // 722.5
+				
                 // add tax
-                total = total + total * statetax;
+                let finaltotal = total + total * statetax;
 
                 // display total
-                document.querySelector("#total").innerHTML = "Total Amound Due: $${total.toFixed(2)}";
-                
+                document.querySelector("#total").innerHTML = "Total Amount Due: $" + finaltotal;
+                //document.getElementById("total").innerHTML = "Total Amount Due: $${finaltotal.toFixed(2)}";
+
+            }
+            
+            function amountDiscount(subtot){
+            	if (subtot > 100){
+                	return 0.1
+                }
+                return 0
             }
 
             function dayDiscount() {
                 let D = new Date();
                 let discount = 0;
-                let dayoftheweek = D.getDay(); 
+                let dayoftheweek = D.getDay();
                 switch (dayoftheweek) {
                     case 0:
                         discount = .0;
@@ -79,41 +98,7 @@
             return discount;
         }
 
-            function processTotal() {
-            // Declarations
-            let total = 0;
-            // input 
-            let subtotal = parseFloat(document.querySelector("#subtotal").value);
-            // Determine if there is a day discount
-            let discount = dayDiscount();
-            total = subtotal * (1 - discount);
-            // Determine if there is an amount discount
-            let adiscount = amountDiscount(subtotal);
-            total = total - subtotal * adiscount;
-            // Add the tax
-            total = total + total 
-            // Display total
-            document.querySelector("total").innerHTML = total;
-        }
-
-        function processTotal() {
-            // Declarations
-            let total = 0;
-            // Input
-            let subtotal = parseFloat(document.querySelector("#subtotal").value);
-            let statetax = parseFloat(document.querySelector("#state").value);
-
-            // Determine if there is an amount discount
-            let adiscount = amountDiscount(subtotal);
-            total = total - subtotal * adiscount;
-
-            // Add tax
-            document.querySelector("#total").innerHTML = "Total Amount Due: $${total.toFixed(2)}";
-
-        }
 
         </script>
     </body>
 </html>
-
-            
