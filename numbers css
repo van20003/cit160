@@ -1,89 +1,33 @@
-body {
-	font-size: 16px;
-}
+<header>
+	<h1>Sales Slip</h1>
+	<h2>Student Name</h2>
+</header>
+<main>
+	<h3>Line Items</h3>
+	<div class="tableform">
+		<span class="heading">Description</span>
+		<span class="heading">Quantity</span>
+		<span class="heading">Price</span>
+		<label><input type="text" id="desc1"></label>
+		<label><input type="text" id="q1" size="3"></label>
+		<label><input type="text" id="p1" size="5"></label>
+		<label><input type="text" id="desc2"></label>
+		<label><input type="text" id="q2" size="3"></label>
+		<label><input type="text" id="p2" size="5"></label>
+		<label><input type="text" id="desc3"></label>
+		<label><input type="text" id="q3" size="3"></label>
+		<label><input type="text" id="p3" size="5"></label>
+	</div>
+	<h3>Discount</h3>
+	<label class="heading">Discount %: <input type="text" id="discount" placeholder=".10"></label>
+	<h3>Tax</h3>
+	<label class="heading">Tax %: <input type="text" id="tax" placeholder=".075"></label>
 
-header, footer, main {
-	max-width: 500px;
-	margin: 0 auto;
-}
-
-header,
-footer {
-	background-color: #000;
-	color: #fff;
-	padding: 1rem;
-	text-align: center;
-}
-
-footer {
-	font-size: smaller;
-	letter-spacing: 1.5pt;
-}
-
-h1,
-h2 {
-	margin: 0;
-	text-align: center;
-}
-
-h3 {
-	font-size: 1.3rem;
-	color: navy;
-	border-bottom: 1px solid navy;
-	text-align: left;
-	margin: .5rem;
-}
-
-main {
-	margin: 10px auto;
-	border: 1px solid rgba(0,0,0,.3);
-	padding: .5rem;
-	background-color: #abe;
-	box-shadow: 0 0 30px;
-}
-
-.tableform {
-	display: grid;
-	grid-template-columns: 1fr 100px 100px;
-	grid-gap: .5rem;
-	align-items: center;
-	margin: 1rem auto;
-}
-
-.heading {
-	font-weight: 700;
-	font-size: larger;
-}
-
-h3 + label {
-	text-align: right;
-	display: block;
-	margin-right: 1rem;
-}
-
-input, button, textarea, select {
-	padding: .35rem;
-	font-weight: 700;
-	color: navy;
-}
-
-
-button {
-	font-size: larger;
-	width: 100%;
-}
-
-.process {
-	margin: 1rem;
-	padding: 1rem;
-	border-bottom: 2px solid navy;
-}
-
-.output {
-	margin: 1rem;
-}
-
-
-
-
+	<div class="process"><button onclick="getTotal()">Submit Sales Slip</button>
+	</div>
+	<p id="output"></p>
+</main>
+<footer>
+	&copy;<span id="copyright"></span> &bull; Student Name &bull; BYU-Idaho &bull; CIT 160
+</footer>
 

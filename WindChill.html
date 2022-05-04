@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="widrg=device-width, initial-scale=1.0">
+        <title>Discount Function</title>
+    </head>
+    <body>
+        <h1>WindChill</h1>
+
+        <form action="/action_page.php">
+            <label for="Temperature">Temperature:</label>
+            <input type="text" id="Temperature" name="Temperature"><br><br>
+            <label for="WindSpeed">WindSpeed:</label>
+            <input type="text" id="WindSpeed" name="WindSpeed"><br><br>
+          </form>
+        
+          <button onclick="WindChill()">Calculate</button>
+
+        <div id="Temperature"></div>
+        <div id="WindChill"></div>
+        <hr>
+        <h4>Calculate:<span id="()"></span></h4>
+        </form>
+
+        <script>
+        function doInputOutput() {
+            // Input The values to be used to calculate
+            let Temperature = parseFloat(document.querySelector("#Temperature").value);
+            let WindSpeed = parseFloat(document.querySelector("#WindSpeed").value);
+            // Process
+            const WindChill = 35.74 + 0.6215(Temperature) - 35.756(WindSpeed)^0.16 + 0.4275(Temperature)(WindSpeed)^0.16;
+            
+        }
+
+        function windChill(tempF, speed) {
+            // Input Store return value of windChill 
+
+            // Output the return value of windChill
+            WindChill = parseFloat(document.querySelector("#WindChill").value);
+
+        }
+
+        
+
+        </script>
+    </body>
+</html>

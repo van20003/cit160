@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="widrg=device-width, initial-scale=1.0">
+        <title>Discount Function</title>
+    </head>
+    <body>
+        <h1>Discount Function</h1>
+        <label for="subtotal"><input type="text" id="subtotal"></label><br>
+        <label for="state">
+        </label> 
+            <select name="state" id="state"> Virginia (8%), Ohio (7%), and Nevada (5%).
+            <option value="" selected disabled>Choose the State ...</option>
+            <option value=".08">Virginia</option>
+            <option value=".07">Ohio</option>
+            <option value=".05">Nevada</option>
+        </select>
+        </label><br><br>
+
+        <button onclick="processTotal()">Process Total</button>
+
+        <div id="total"></div>
+
+        <script>
+            function processTotal() {
+                // Declarations
+                let total = 0;
+                // input
+                let subtotal = parseFloat(document.querySelector("#subtotal").value);
+                let statetax = parseFloat(document.querySelector("#state").value);
+
+                // Determine if there is a day discount
+                let discount = dayDiscount();
+                total = subtotal * (1 - discount);
+
+                // Determine if there is an amount discount
+                if(subtotal > 100)(
+                    let adiscount = amountDiscount(subtotal);
+                    total = subtotal * (1- discount);
+
+                // add tax
+                total = total + total * statetax;
+
+                // display total
+                document.querySelector("#total").innerHTML = "Total Amound Due: $${total.toFixed(2)}";
+                
+            }
+
+            function dayDiscount() {
+                let D = new Date();
+                let discount = 0;
+                let dayoftheweek = D.getDay(); 
+                switch (dayoftheweek) {
+                    case 0:
+                        discount = .0;
+                        break;
+                    case 1:
+                        discount = .10;
+                        break;
+                    case 2:
+                        discount = .15;
+                        break;
+                    case 3:
+                        discount = .20;
+                        break;
+                    case 4:
+                        discount = .15;
+                        break;
+                    case 5:
+                        discount = .05;
+                        break;
+                    case 6:
+                        discount = .0;
+                        break;
+                    
+            }
+            return discount;
+        }
+
+            function processTotal() {
+            // Declarations
+            let total = 0;
+            // input 
+            let subtotal = parseFloat(document.querySelector("#subtotal").value);
+            // Determine if there is a day discount
+            let discount = dayDiscount();
+            total = subtotal * (1 - discount);
+            // Determine if there is an amount discount
+            let adiscount = amountDiscount(subtotal);
+            total = total - subtotal * adiscount;
+            // Add the tax
+            total = total + total 
+            // Display total
+            document.querySelector("total").innerHTML = total;
+        }
+
+        function processTotal() {
+            // Declarations
+            let total = 0;
+            // Input
+            let subtotal = parseFloat(document.querySelector("#subtotal").value);
+            let statetax = parseFloat(document.querySelector("#state").value);
+
+            // Determine if there is an amount discount
+            let adiscount = amountDiscount(subtotal);
+            total = total - subtotal * adiscount;
+
+            // Add tax
+            document.querySelector("#total").innerHTML = "Total Amount Due: $${total.toFixed(2)}";
+
+        }
+
+        </script>
+    </body>
+</html>
+
+            
